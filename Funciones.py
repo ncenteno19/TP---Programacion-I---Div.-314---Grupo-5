@@ -1,6 +1,5 @@
 import subprocess
 import os
-import random
 
 def limpiar_consola():
     comando = "cls" if os.name == "nt" else "clear"
@@ -16,11 +15,11 @@ def validar_usuario_y_contrasenia(usuario: str, contrasenia:str) -> bool:
           validacion = False
      return validacion
 
-def transferir_dinero(vector: list, monto: float) -> None:
-     vector[3] -= monto
+def transferir_dinero(vector: dict, monto: float) -> None:
+     vector["saldo"] -= monto
 
-def cargar_dinero(vector: list, monto: float) -> None:
-     vector[3] += monto
+def cargar_dinero(vector: dict, monto: float) -> None:
+     vector["saldo"] += monto
 
 
 
